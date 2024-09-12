@@ -44,9 +44,11 @@ let urlencodedParser = express.urlencoded({extended:false});
 /* Récupération des données et affichage de la page de traitement */
 app.post('/merci', urlencodedParser, function(req, res, next){
   let lenom = req.body.nom;
-  let lemessage = req.body.msg;
+  let lemessage = req.body.message;
+  let lemail = req.body.email;
+  let laville = req.body.ville;
 
-  res.render('merci.ejs',{titre:'formulaire reçu', nom:lenom, msg:lemessage});
+  res.render('merci.ejs',{titre:'formulaire reçu', nom:lenom, msg:lemessage,nomPage:"merci", mail:lemail, vil:laville});
 });
 
 

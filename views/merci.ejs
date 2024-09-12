@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>traitement du formulaire</title>
-</head>
-<body>
+<%- include('inc/banniere.ejs'); -%>
+<%- include('inc/menu.ejs'); -%>
+
     <h1><%= titre %></h1>
     <p> bonjour <%=nom%></p>
     <p>nous avons bien reçu votre message</p>
     <p>votre message : </p>
-    <strong> <%= message %></strong>
+    <strong> <%= msg %></strong>
+    <strong><p>Merci,<%= mail %></p></strong>
+    <strong><p>Ville de <%= vil %></p></strong>
     <br>
     <p><a href="/">retour à l'accuel</a></p>
     <p><a href="/contact">Envoyer un autre message</a></p>
